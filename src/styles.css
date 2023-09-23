@@ -1,0 +1,1346 @@
+.App {
+  font-family: "Roboto";
+  text-align: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.Grab {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.upLeft {
+  z-index: 5;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0.9;
+  max-width: 100px;
+}
+
+#checkboxG {
+  align-content: flex-start;
+}
+
+.upRight {
+  z-index: 5;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#pnone3 {
+  min-width: 180px;
+}
+
+#lefttoright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+  align-content: left;
+}
+
+#pnone2 {
+  align-self: flex-start;
+  font-size: 12px;
+  width: 150px;
+  align-items: left;
+  align-content: left;
+  text-align: left;
+}
+
+.arrow {
+  cursor: pointer;
+  z-index: 4;
+  /* Add styling for your arrow icon or content */
+}
+
+.customNode {
+  border: 1px solid #ddd;
+  min-width: 90px;
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  z-index: 31;
+}
+
+.customNode2 {
+  border: 1px solid #ddd;
+  min-width: 90px;
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: black;
+  z-index: 31;
+}
+
+#szin {
+  z-index: 4;
+  margin-bottom: 10px;
+}
+
+#szin3 {
+  z-index: 4;
+  margin-top: 15px;
+}
+
+.downSlide {
+  z-index: 4;
+}
+
+.inputImg::invalid {
+  display: none;
+}
+
+.inputCreate {
+  border-radius: 5px;
+  border: 2px solid rgb(97, 111, 125);
+}
+
+.context-box {
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 200px;
+}
+
+.context-area {
+  width: 100%;
+  border: 1px solid black;
+  font-size: 16px;
+  outline: none;
+  height: 150px;
+}
+
+.inputContext {
+  border-radius: 5px;
+  border: 2px solid rgb(97, 111, 125);
+  margin: 0px;
+  padding: 0px;
+  height: 100px;
+}
+
+.dropdownNodeBackground {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nodeLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+.left {
+  font-size: 70%;
+  text-align: left;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.right {
+  font-size: 70%;
+  text-align: right;
+  margin: 0;
+
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.center {
+  text-align: center;
+  margin: 0;
+}
+.lefti {
+  text-align: left;
+  position: absolute;
+  left: 80%;
+  top: 70%;
+}
+
+.containerDot {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.containerDot input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.containerDot:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containerDot input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containerDot input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containerDot .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.big {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+.small {
+  font-size: 15px;
+  margin: 0;
+}
+
+.medium {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.mediumB {
+  font-size: 13px;
+  margin: 0;
+
+  color: black;
+}
+.rotate180 {
+  /* CSS for rotating the arrow */
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.moreInfo {
+  display: none; /* Initially hide the moreInfo div */
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease; /* Add transitions for smooth slide animation */
+}
+
+.slideDown2 {
+  display: block; /* Show the moreInfo div */
+  max-height: 500px; /* Adjust to the maximum height you want */
+  padding: 10px; /* Add padding as needed */
+}
+
+#arrow4 {
+  cursor: pointer;
+
+  font-size: 80%;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.arrow {
+  cursor: pointer;
+
+  margin-top: 30px;
+}
+
+/* Show "arrow4" when its parent is hovered over */
+.customNode.hovered #arrow4 {
+  display: inline; /* or 'block' if you want it on a new line */
+}
+
+.container {
+  font-size: 0.8rem;
+  position: relative;
+
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 200px; /* Set a specific width for the container */
+  max-height: 0;
+  min-height: 0;
+}
+
+.container.slideDown3 {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: white;
+  max-height: 500px; /* Set a value larger than the content's height */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+#optiony23 {
+  color: black;
+}
+
+#optionyrer {
+  color: blueviolet;
+}
+
+#optionyred {
+  color: red;
+}
+
+#optionory {
+  color: rgb(255, 145, 0);
+}
+
+#optionybl {
+  color: rgb(0, 55, 255);
+}
+
+#optionygre {
+  color: rgb(3, 151, 18);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0px;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column-reverse; /* Change to column layout */
+    align-items: flex-end; /* Align buttons to the right */
+  }
+
+  /* Decrease font size for buttons */
+  .button-container #buttonSave,
+  .button-container #buttonUndo,
+  .button-container .download-btn {
+    font-size: 12px !important; /* Use !important to give higher specificity */
+  }
+
+  /* Decrease button size */
+  .button-container #buttonSave,
+  .button-container #buttonUndo,
+  .button-container .download-btn {
+    padding: 7px 10px !important; /* Use !important to give higher specificity */
+    margin-right: 10px;
+  }
+}
+
+/* Button styling */
+#buttonSave {
+  background-color: #6b4226; /* Earthy brown color for the button */
+  color: #fff; /* White text color */
+  padding: 10px 15px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Adjust font size as needed */
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: 4;
+}
+
+/* Hover effect */
+#buttonSave:hover {
+  background-color: #4e2a15; /* Darker brown on hover */
+}
+
+/* Keyframes for the pulsating animation */
+
+#buttonUndo {
+  background-color: #d1b471; /* Earthy blue color for the button */
+  color: #fff; /* White text color */
+  padding: 10px 15px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Adjust font size as needed */
+  cursor: pointer;
+  margin-top: 15px;
+  z-index: 4;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#buttonRedo:hover {
+  background-color: #d1b471;
+}
+
+#buttonUndo:hover {
+  background-color: #b08d3d;
+}
+
+#buttonRedo:disabled {
+  background-color: rgba(255, 196, 35, 0.684);
+}
+
+#buttonUndo:disabled {
+  background-color: #b08d3d9f;
+}
+
+body {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#header {
+  position: absolute;
+  width: 300px;
+  overflow: visible;
+
+  padding: 0;
+}
+#header .pro-sidebar {
+  z-index: 111;
+}
+#header .closemenu {
+  color: #000;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  top: 70px;
+
+  z-index: 111;
+  cursor: pointer;
+}
+#header .pro-sidebar {
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  border-right: 1px solid rgb(146, 146, 146);
+  padding-right: 12px;
+  z-index: 111;
+  background: white;
+}
+#header .pro-sidebar.collapsed {
+  width: 70px;
+  min-width: 70px;
+  overflow: hidden;
+}
+#header .pro-sidebar-inner {
+  background-color: white;
+  z-index: 111;
+}
+
+#header .pro-sidebar-inner .pro-sidebar-layout {
+  overflow-y: hidden;
+  z-index: 111;
+}
+#header .pro-sidebar-inner .pro-sidebar-layout .logotext p {
+  padding: 0px;
+  color: #000;
+  font-weight: bold;
+  z-index: 111;
+}
+#header .pro-sidebar-inner .pro-sidebar-layout ul {
+  padding: 0px;
+  z-index: 111;
+}
+#header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item {
+  color: #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 10px;
+  z-index: 111;
+  font-weight: bold;
+}
+
+.pro-icon-wrapper {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 3px;
+  margin-left: 25px;
+  z-index: 111;
+}
+
+#header .pro-sidebar-inner .pro-sidebar-layout ul .pro-icon-wrapper {
+  background-color: #d4e09b;
+  width: 36px;
+  height: 36px;
+  margin-left: 15px;
+  z-index: 111;
+}
+
+.pro-item-content {
+  color: #000;
+}
+
+#header .logo {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 720px) {
+  html {
+    overflow: hidden;
+  }
+}
+
+#iconhome {
+  position: relative;
+}
+#hi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 111;
+}
+
+#sidebar-container {
+  position: absolute;
+  width: 300px;
+  height: 100vh; /* Set a fixed height */
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+  overflow-x: hidden;
+  z-index: 111;
+}
+
+#sidebar-container.collapsed {
+  position: absolute;
+  width: 70px;
+  height: 100vh; /* Set a fixed height */
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+  overflow-x: hidden;
+  z-index: 111;
+}
+
+/* Adjust the height of the sidebar content */
+#header .pro-sidebar {
+  min-height: 100%; /* Ensure the sidebar takes up the full container height */
+  padding-bottom: 60px; /* Adjust as needed to make room for footer */
+  overflow: visible;
+  z-index: 111;
+}
+
+/* Add a maximum height for the dropdowns to prevent them from overflowing the sidebar */
+#header .pro-sidebar .dropdown-menu {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto;
+  z-index: 111; /* Add scrollbar when dropdown content overflows */
+}
+
+/* Style the scrollbar track */
+#sidebar-container::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar track */
+}
+
+/* Style the scrollbar thumb */
+#sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Round the corners of the thumb */
+}
+
+/* Change scrollbar thumb color on hover */
+#sidebar-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Style the scrollbar track in Firefox */
+#sidebar-container {
+  scrollbar-width: thin; /* Width of the scrollbar track */
+  scrollbar-color: #888 transparent; /* Color of the scrollbar thumb and track */
+}
+
+/* Change scrollbar thumb color on hover in Firefox */
+#sidebar-container:hover {
+  scrollbar-color: #555 transparent;
+}
+/* Hide the scrollbar when the sidebar is collapsed */
+#sidebar-container.collapsed::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+/* Hide the scrollbar in Firefox when the sidebar is collapsed */
+#sidebar-container.collapsed {
+  scrollbar-width: none;
+}
+.slideDown {
+  max-height: 500px; /* Set a value larger than the content's height */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.slideUp {
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.Rinko {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #573117;
+  border: 1px solid transparent;
+  z-index: 10;
+  color: rgba(250, 250, 250, 0.862);
+  margin-bottom: 10px;
+}
+.Rinko:hover {
+  background-color: #4c3012;
+  color: white;
+}
+.Binko {
+  width: 180px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #32292f;
+  color: rgb(214, 219, 205);
+  z-index: 4;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+#inputFieldB {
+  height: 20px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  z-index: 4;
+  border-radius: 5px;
+}
+
+#inputFieldc {
+  width: 200px;
+  height: 28px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  z-index: 4;
+  border-radius: 5px;
+  border: 2px solid rgb(97, 111, 125);
+}
+
+.upAbove {
+  z-index: 5;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.upAboveb {
+  z-index: 5;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upAboveC {
+  z-index: 5;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container2 button {
+  /* Your existing button styles here */
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+  margin: 0.3rem 0;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+
+.topB,
+.bottomB {
+  display: flex;
+  justify-content: center;
+  margin: 0.3rem 0;
+}
+
+#button1 {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 4;
+}
+#button2 {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 4;
+}
+#button3 {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 4;
+}
+#button4 {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 80%;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 4;
+}
+#button5 {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 80%;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 4;
+}
+#button6 {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 80%;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 4;
+}
+
+#button1:active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+
+#button2:active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+
+#button3:active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+
+#button4:active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+#button5:active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+#button6:active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+.download-btn {
+  background-color: #4c7031; /* Earthy green color for the button */
+  color: #fff; /* White text color */
+  padding: 8px 14px; /* Adjust padding as needed */
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Adjust font size as needed */
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 10px;
+  z-index: 4;
+}
+
+/* Hover effect for #download-btn */
+.download-btn:hover {
+  background-color: #385221; /* Darker green on hover */
+}
+
+#button1.active,
+#button2.active,
+#button3.active,
+#button4.active,
+#button5.active,
+#button6.active {
+  background-color: rgba(161, 228, 140, 0.849);
+}
+
+::placeholder {
+  font-size: 13px; /* Set the desired font size */
+  color: #999; /* Optional: Change the color of the placeholder text */
+
+  text-indent: 5px;
+}
+
+#inputField {
+  width: 220px;
+  height: 30px;
+  margin-bottom: 10px;
+  z-index: 4;
+  border-radius: 5px;
+  border: 2px solid rgb(97, 111, 125);
+}
+#inputFieldB {
+  width: 230px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid rgb(97, 111, 125);
+  z-index: 4;
+}
+#szin {
+  z-index: 4;
+  margin-bottom: 10px;
+}
+.input-group label,
+.select-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 90%;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.dateInput {
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(97, 111, 125);
+}
+
+#optiony23 {
+  color: black;
+}
+
+#optionyrer {
+  color: blueviolet;
+}
+
+#optionyred {
+  color: red;
+}
+
+#optionory {
+  color: rgb(255, 145, 0);
+}
+
+#optionybl {
+  color: rgb(0, 55, 255);
+}
+
+#optionygre {
+  color: rgb(3, 151, 18);
+}
+.dropdown {
+  /* ... Your existing dropdown styles ... */
+  margin-top: 3px;
+  padding: 0.2rem;
+  font-size: 0.8rem; /* Use relative units for font size */
+  height: 25px;
+}
+.dropdown option {
+  /* ... Your existing dropdown styles ... */
+  padding: 10px;
+}
+
+.diVson {
+  background-color: #f8eccf;
+  width: 210px;
+  height: 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+
+.diVson.open {
+  width: 274px;
+  margin-left: 6px;
+}
+
+.diVson2 {
+  background-color: #f8eccf;
+  width: 210px;
+  height: 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+
+.diVson2.open {
+  width: 274px;
+  margin-left: 6px;
+}
+
+.diVson3 {
+  background-color: #f8eccf;
+  width: 210px;
+  height: 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+
+.diVson3.open {
+  width: 274px;
+  margin-left: 6px;
+}
+
+.diVson4 {
+  background-color: #f8eccf;
+  width: 210px;
+  height: 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+
+.diVson4.open {
+  width: 274px;
+  margin-left: 6px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add spacing between checkbox items */
+  margin-top: 20px;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the custom checkbox container */
+.checkbox-container label::before {
+  content: "";
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333; /* Border color for the checkbox */
+  border-radius: 4px; /* Rounded corners for the checkbox */
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 10px; /* Add spacing between checkbox and label */
+  cursor: pointer;
+}
+
+/* Style the custom checkbox when checked */
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  content: "\2713";
+  background-color: #4caf50; /* Change the background color to green when checked */
+  color: white; /* Change the color of the checkmark */
+}
+
+/* Style the label text */
+.checkbox-container label {
+  font-size: 16px;
+  color: #333; /* Text color */
+  cursor: pointer; /* Add a pointer cursor when hovering over the label */
+}
+
+.opti {
+  font-size: 24px;
+}
+.opti2 {
+  font-size: 22px;
+}
+
+.opti3 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+/* CSS for the toggle switch container */
+.toggle-switch-container2 {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide the actual checkbox input */
+.toggle-switch-container2 input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the toggle switch label */
+.toggle-switch-container2 label {
+  margin-top: 10px;
+  position: relative;
+  padding: 8px 24px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Style the toggle switch handle */
+.toggle-switch-container2 label::before {
+  content: "";
+  position: absolute;
+  left: 4px; /* Start position for left */
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Adjust the position of the handle when the toggle switch is on */
+.toggle-switch-container2 input[type="checkbox"]:checked + label::before {
+  left: calc(100% - 20px); /* End position for right */
+  background-color: #066613; /* Toggle switch on color */
+}
+
+/* Change the background color of the label when the toggle switch is on */
+.toggle-switch-container2 input[type="checkbox"]:checked + label {
+  background-color: #69bc42; /* Toggle switch on color */
+}
+
+.toggle-switch-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide the actual checkbox input */
+.toggle-switch-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the toggle switch label */
+.toggle-switch-container label {
+  margin-top: 10px;
+  position: relative;
+  padding: 8px 24px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Style the toggle switch handle */
+.toggle-switch-container label::before {
+  content: "";
+  position: absolute;
+  left: 4px; /* Start position for left */
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Adjust the position of the handle when the toggle switch is on */
+.toggle-switch-container input[type="checkbox"]:checked + label::before {
+  left: calc(100% - 20px); /* End position for right */
+  background-color: #066613; /* Toggle switch on color */
+}
+
+/* Change the background color of the label when the toggle switch is on */
+.toggle-switch-container input[type="checkbox"]:checked + label {
+  background-color: #69bc42; /* Toggle switch on color */
+}
+.delnode {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #69320abc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delnode:hover {
+  background-color: #69320aed;
+}
+.editTag {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: none;
+}
+
+.editTag.visible {
+  opacity: 1;
+  display: block;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.logotext2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* .react-flow .react-flow__handle {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #0b0815;
+} */
+.logoutbtn {
+  display: flex;
+  align-items: center;
+  background-color: #fff8e9;
+  margin-left: 5px;
+  border-radius: 10px;
+  width: 55%;
+}
+
+.logoutbtn:hover {
+  background-color: #f6d898;
+}
+
+.tutbtn {
+  display: flex;
+  align-items: center;
+  background-color: #fff8e9;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 10px;
+  width: 73%;
+}
+
+.tutbtn:hover {
+  background-color: #f6d898;
+}
+
+.tutbtn2 {
+  display: flex;
+  align-items: center;
+  background-color: #fff8e9;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 10px;
+  width: 65%;
+}
+
+.tutbtn2:hover {
+  background-color: #f6d898;
+}
+.hidden {
+  display: none;
+}
+/* Style for the custom handle */
+.custom-handle.connecting {
+  background: rgb(
+    14,
+    218,
+    14
+  ); /* Change the background color while connecting */
+  /* You can adjust the color change to be more significant by altering the values below */
+
+  z-index: 999;
+}
+
+.react-flow .react-flow__handle {
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 100%;
+}
+
+.custom-handle {
+  background: #55dd99; /* Your default handle background color */
+  /* Add other styles as needed */
+}
+
+/* Style for non-connectable handles */
+.custom-handle.non-connectable {
+  /* Add styles for non-connectable handles here */
+  cursor: not-allowed; /* Change cursor to indicate non-connectable */
+  opacity: 1; /* Reduce opacity for non-connectable handles */
+  /* Add other styles as needed */
+}
+/* styles.css */
+.imgUp {
+  margin-top: 10px;
+}
+
+.inputImg {
+  margin-right: 5px;
+  margin-left: 5px;
+  /* Add your styling for the input element here */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.submitImg {
+  /* Add your styling for the button element here */
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px 8px;
+  background-color: #758f6f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.submitImg:hover {
+  background-color: #74a469;
+}
+
+/* Add any additional styling as needed */
+.Dinko:hover {
+  background-color: #ddfbec;
+  color: rgb(3, 96, 96);
+}
+
+/* Common styles for both true and false */
+.react-flow .react-flow__handle {
+  /* Common styles here */
+}
+
+/* Styles for when toggleSwitch2 is true */
+.enabled .react-flow .react-flow__handle {
+  width: 30px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: #784be8;
+}
+
+.enabled .react-flow .react-flow__handle-top {
+  top: -10px;
+}
+
+.enabled .react-flow .react-flow__handle-bottom {
+  bottom: -10px;
+}
+.enabled .react-flow .react-flow__handle-right {
+  right: -20px;
+  transform: rotate(90deg);
+}
+
+.enabled .react-flow .react-flow__handle-left {
+  left: -20px;
+  transform: rotate(90deg);
+  margin-bottom: 50px;
+}
+
+/* Styles for when toggleSwitch2 is false */
+.disabled .react-flow .react-flow__handle {
+  /* Styles for false state here */
+}
+.toggle-switch-container3 {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide the actual checkbox input */
+.toggle-switch-container3 input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the toggle switch label */
+.toggle-switch-container3 label {
+  margin-top: 10px;
+  position: relative;
+  padding: 8px 24px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Style the toggle switch handle */
+.toggle-switch-container3 label::before {
+  content: "";
+  position: absolute;
+  left: 4px; /* Start position for left */
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Adjust the position of the handle when the toggle switch is on */
+.toggle-switch-container3 input[type="checkbox"]:checked + label::before {
+  left: calc(100% - 20px); /* End position for right */
+  background-color: #066613; /* Toggle switch on color */
+}
+
+/* Change the background color of the label when the toggle switch is on */
+.toggle-switch-container3 input[type="checkbox"]:checked + label {
+  background-color: #69bc42; /* Toggle switch on color */
+}
